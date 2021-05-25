@@ -9,11 +9,16 @@ import { Veiculo } from '../models/veiculo';
 })
 export class HomeComponent implements OnInit {
 
-  veiculos: any
+  listaVeiculo: any
   constructor(private serviceVeiculo: ServiceVeiculo) { }
 
   ngOnInit(): void {
-    this.veiculos = this.serviceVeiculo.listar();
+    this.serviceVeiculo.listar().subscribe(veiculos => {
+      console.log(veiculos)
+      this.listaVeiculo = veiculos
+    } 
+      
+    )
   }
 
 }

@@ -1,2 +1,30 @@
-<p>home works!</p>
-<h1>{{ listaVeiculo }}</h1>
+<div class="container">
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Placa</th>
+        <th scope="col">modelo</th>
+        <th scope="col">valor</th>
+        <th scope="col">cor</th>
+        <th scope="col">estado</th>
+        <th scope="col">data entrada</th>
+        <th scope="col">data saida</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of listaVeiculo">
+        <th scope="row" >{{v.id}}</th>
+        <td>{{v.placa | uppercase }}</td>
+        <td>{{v.modelo}}</td>
+        <td>{{v.valor}}</td>
+        <td>{{v.cor}}</td>
+        <td>{{v.estado}}</td>
+        <td>{{v.dataEntrada}}</td>
+        <td>{{v.dataSaida}}</td>
+      </tr>
+
+    </tbody>
+  </table> 
+
+</div>

@@ -24,5 +24,14 @@ export class HomeComponent implements OnInit {
       this.listaVeiculo = veiculos
     })
   }
+  excluir = (id: any) => {
+    this.serviceVeiculo.excluir(id).subscribe(
+      success => console.log("Deletado com sucesso"),
+      error => console.log("Não foi possivel deletar. ERRO!"),
+      () => console.log('Requisição completa')
+    )   
+    this.ngOnInit();
+  }
+  
 
 }

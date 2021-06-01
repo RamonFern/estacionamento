@@ -14,4 +14,8 @@ export class ServiceVeiculo {
   listar(){
     return this.http.get<Veiculo[]>(`${this.API}`)
   }
+
+  excluir(id: any){
+    return this.http.delete(`${this.API}/${id}`)
+  }
 }

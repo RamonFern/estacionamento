@@ -10,6 +10,8 @@
         <th scope="col">estado</th>
         <th scope="col">data entrada</th>
         <th scope="col">data saida</th>
+        <th scope="col">Excluir</th>
+        <th scope="col">Editar</th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +25,7 @@
         <td>{{v.dataEntrada}}</td>
         <td>{{v.dataSaida}}</td>
         <td> <button type="button" class="btn btn-danger" (click)="excluir(v.id)">Excluir</button></td>
+        <td> <button type="button" class="btn btn-warning" (click)="editar(v.id)">Editar</button></td>
 
       </tr>
 

@@ -23,4 +23,11 @@ export class ServiceVeiculo {
     return this.http.post(this.API, veiculo)
   }
   
+  editar(veiculo: Veiculo){
+    return this.http.put(`${this.API}/${veiculo.id}`, veiculo)
+  }
+
+  buscarItemId(id: any){
+    return this.http.get<Veiculo>(`${this.API}/${id}`)
+  }
 }

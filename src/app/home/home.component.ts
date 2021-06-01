@@ -1,6 +1,7 @@
 import { Veiculo } from './../models/veiculo';
 import { ServiceVeiculo } from '../service/service.veiculo';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,14 +12,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   listaVeiculo: any
-  constructor(private serviceVeiculo: ServiceVeiculo) { }
+  
+  constructor(private serviceVeiculo: ServiceVeiculo, private router: Router) { }
 
   ngOnInit(): void {
     this.listar();  
   }
 
   listar(){
-    console.log("dentro do listar!")
     this.serviceVeiculo.listar().subscribe(veiculos => {
       console.log(veiculos)
       this.listaVeiculo = veiculos
@@ -31,6 +32,10 @@ export class HomeComponent implements OnInit {
       () => console.log('Requisição completa')
     )   
     this.ngOnInit();
+  }
+
+  editar = (id: any) => {
+    this.router.navigate(['cadastro', id])
   }
   
 

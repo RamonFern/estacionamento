@@ -1,14 +1,14 @@
 export class Veiculo {
 
     constructor(
-        private id: string,
-        private placa: string,
-        private estado: string,
-        private modelo: string,
-        private cor: string, 
-        private dataEntrada: string,
-        private datasaida: string,
-        private valor: number 
+        public id: string,
+        public placa: string,
+        public estado: string,
+        public modelo: string,
+        public cor: string, 
+        public dataEntrada: string,
+        public datasaida: string,
+        public valor: number 
         ){}
 
 }    

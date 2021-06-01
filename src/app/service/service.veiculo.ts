@@ -18,4 +18,9 @@ export class ServiceVeiculo {
   excluir(id: any){
     return this.http.delete(`${this.API}/${id}`)
   }
+
+  incluir(veiculo: Veiculo){
+    return this.http.post(this.API, veiculo)
+  }
+  
 }

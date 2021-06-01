@@ -1,0 +1,13 @@
+<div class="container">
+    <label for="placa" class="form-label">Placa</label>
+    <input  [(ngModel)]="veiculo.placa" class="form-control" type="text" placeholder="digite a placa" aria-label="Disabled input example">
+    <label for="modelo" class="form-label">Modelo</label>
+    <input [(ngModel)]="veiculo.modelo" class="form-control" type="text" placeholder="digite o modelo" aria-label="Disabled input example">
+    <label for="cor" class="form-label">Cor</label>
+    <input [(ngModel)]="veiculo.cor" class="form-control" type="text" placeholder="digite a cor" aria-label="Disabled input example">
+    <label for="estado" class="form-label">Estado</label>
+    <input [(ngModel)]="veiculo.estado" class="form-control" type="text" placeholder="digite o estado" aria-label="Disabled input example">
+    <br>
+    <button type="button" class="btn btn-outline-success" (click)="incluir()">Adicionar</button>
+</div>
+
